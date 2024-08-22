@@ -1,5 +1,7 @@
 package com.example.springboot_3_daily_devotional.model;
 
+import java.time.LocalDateTime;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -25,4 +27,8 @@ public class Devotinal {
 
     @Column(columnDefinition = "TEXT")
     String content;
+
+    LocalDateTime createdAt;
+
+    LocalDateTime updatedAt;
 }
