@@ -20,4 +20,9 @@ public class Devotinal {
     String quote;
 
     String author;
+
+    String imagePath;
+
+    @Column(columnDefinition = "TEXT")
+    String content;
 }
