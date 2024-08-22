@@ -15,4 +15,9 @@ public class Devotinal {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    Long id;
+
+    String quote;
+
+    String author;
 }
