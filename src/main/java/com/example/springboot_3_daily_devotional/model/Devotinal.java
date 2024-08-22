@@ -31,4 +31,13 @@ public class Devotinal {
     LocalDateTime createdAt;
 
     LocalDateTime updatedAt;
+
+    LocalDate publishedAt;
+
+    @Override
+    public String toString() {
+        return String.format(
+                "Devotional{id=%d, imagePath='%s', quote='%s', author='%s',content='%s', createDAt='%s', updatedAt='%s', publishedAt='%s',}",
+                id, imagePath, quote, author, content, createdAt, updatedAt, publishedAt);
+    }
 }
