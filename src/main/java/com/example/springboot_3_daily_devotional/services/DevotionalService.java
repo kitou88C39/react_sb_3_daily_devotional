@@ -3,6 +3,7 @@ package com.example.springboot_3_daily_devotional.services;
 import lombok.AllArgsConstructor;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
@@ -23,5 +24,10 @@ public class DevotionalService {
 
     public List<Devotional> getAllDevotions() {
         return devotionalRepository.findAll();
+    }
+
+    public Devotional save(Devotional devotional) {
+    if (devotional.getId() == null ) {
+        devotional.setCreatedAt(LocalDateTime.now());
     }
 }
