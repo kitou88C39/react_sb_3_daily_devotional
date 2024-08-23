@@ -18,5 +18,6 @@ public class DevotionalService {
 
     public Optional<Devotional> getDaily() {
         LocalDate today = LocalDate.now();
+        return devotionalRepository.findByPublishedAt(today);
     }
 }
