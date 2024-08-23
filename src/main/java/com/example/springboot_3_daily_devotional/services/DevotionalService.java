@@ -20,4 +20,8 @@ public class DevotionalService {
         LocalDate today = LocalDate.now();
         return devotionalRepository.findByPublishedAt(today);
     }
+
+    public List<Devotional> getAllDevotions() {
+        return devotionalRepository.findAll();
+    }
 }
