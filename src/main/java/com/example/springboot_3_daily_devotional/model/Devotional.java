@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Devotinal {
+public class Devotional {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

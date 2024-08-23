@@ -4,6 +4,6 @@ import java.time.LocalDate;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface DevotinalRepository extends JpaRepository<Devotional, Long> {
+public interface DevotionalRepository extends JpaRepository<Devotional, Long> {
     Optional<Devotional> findByPublishedAt(LocalDate date);
 }
