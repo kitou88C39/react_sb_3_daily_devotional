@@ -1,7 +1,12 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 
-const AppRoot = () => {
-  return <div>AppRoot</div>;
-};
+function AppRoot() {
+  const [data: undefined, setData] = useState();
+  return (
+    <>
+      <div>AppRoot</div>
+    </>
+  );
+}
 
 export default AppRoot;
