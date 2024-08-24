@@ -5,9 +5,7 @@ import com.example.springboot_3_daily_devotional.services.DevotionalService;
 
 import lombok.AllArgsConstructor;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,13 +28,16 @@ public class DevotionalController {
     }
 
     @GetMapping("devotionals/daily")
-    public ResponseEntity<?> getAllDaily() {
+    public ResponseEntity<?> getDaily() {
         Optional<Devotional> devotionals = devotionalService.getAllDaily();
         Map<String, Object> map = new HashMap();
         if (devotional.isEmpty()) {
             map.put("status", 404);
-            map.put("data", devotionals);
-            return new ResponseEntity<>(map, HttpStatus.OK);
+            map.put("data", null);
+        } else {
+            map.put("status", 200);
+            map.put("data", devotional.get());
         }
+        return new ResponseEntity<>(map, HttpStatus.OK);
     }
 }
