@@ -30,7 +30,7 @@ public class DevotionalController {
 
     @GetMapping("devotionals/daily")
     public ResponseEntity<?> getDaily() {
-        Optional<Devotional> devotionals = devotionalService.getAllDaily();
+        Optional<Devotional> devotionals = devotionalService.getDaily();
         Map<String, Object> map = new HashMap();
         if (devotional.isEmpty()) {
             map.put("status", 404);
