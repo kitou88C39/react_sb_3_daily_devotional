@@ -19,7 +19,16 @@ public class DevotionalController {
 
     private final DevotionalService devotionalService;
 
-    @GetMapping("evotionals")
+    @GetMapping("devotionals")
+    public ResponseEntity<?> getAllDevotinals() {
+        List<Devotional> devotionals = devotionalService.getAllDevotions();
+        Map<String, Object> map = new HashMap<>();
+        map.put("status", 200);
+        map.put("data", devotionals);
+        return new ResponseEntity<>(map, HttpStatus.OK);
+    }
+
+    @GetMapping("devotionals/daily")
     public ResponseEntity<?> getAllDevotinals() {
         List<Devotional> devotionals = devotionalService.getAllDevotions();
         Map<String, Object> map = new HashMap<>();
