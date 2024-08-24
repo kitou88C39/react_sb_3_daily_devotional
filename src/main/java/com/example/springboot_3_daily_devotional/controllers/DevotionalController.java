@@ -1,6 +1,7 @@
 package com.example.springboot_3_daily_devotional.controllers;
 
 import com.example.springboot_3_daily_devotional.controllers.*;
+import com.example.springboot_3_daily_devotional.model.Devotional;
 import com.example.springboot_3_daily_devotional.services.DevotionalService;
 
 import lombok.AllArgsConstructor;
@@ -19,7 +20,7 @@ public class DevotionalController {
     private final DevotionalService devotionalService;
 
     @GetMapping("devotionals")
-    public ResponseEntity<?> getAllDevotinals() {
+    public ResponseEntity<?> getAllDevotionals() {
         List<Devotional> devotionals = devotionalService.getAllDevotions();
         Map<String, Object> map = new HashMap<>();
         map.put("status", 200);
