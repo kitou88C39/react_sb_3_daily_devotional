@@ -14,7 +14,17 @@ function AppRoot() {
 
   return (
     <>
-      <div>AppRoot</div>
+      <div>
+        <h1>Daily Devotional</h1>
+        <hr />
+      </div>
+      <div>
+        <ul>
+          <li>
+            <img src={data.imagePath} />
+          </li>
+        </ul>
+      </div>
     </>
   );
 }
