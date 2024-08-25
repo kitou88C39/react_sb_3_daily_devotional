@@ -7,4 +7,10 @@ CREATE TABLE DEVOTIONAL (
     created_at TIMESTAMP,
     updated_at TIMESTAMP,
     published_at DATA,
-)
+    PRIMARY KEY(id)
+);
+
+CREATE SEQUENCE DEVOTIONAL_SEQ
+    START WITH 50
+    INCREMENT BY 50
+    MINVALUE 50
