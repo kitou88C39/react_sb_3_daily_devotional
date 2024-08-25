@@ -1,5 +1,6 @@
 INSERT INTO
-devotional(id, auote, atuhor, image_path)
+    DEVOTIONAL(id, auote, atuhor, image_path)
 SELECT
-1, "And she shall bring forth as son, and"
+    1, "And she shall bring forth as son, and"
 WHERE
+    NOT EXISTS(SELECT id FROM DEVOTIONAL WHERE)
