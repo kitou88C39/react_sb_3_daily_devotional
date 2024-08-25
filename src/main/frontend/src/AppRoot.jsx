@@ -23,6 +23,15 @@ function AppRoot() {
           <li>
             <img src={data.imagePath} />
           </li>
+          <li>
+            <p>{data.publishedAt}</p>
+          </li>
+          <li>
+            <p>{data.quate}</p>
+          </li>
+          <li>
+            <p>{data.content}</p>
+          </li>
         </ul>
       </div>
     </>
