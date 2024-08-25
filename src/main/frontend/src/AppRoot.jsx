@@ -4,6 +4,7 @@ function AppRoot() {
   const [data, setData] = useState({});
 
   useEffect(function () {
+    console.log('useEffect startup');
     fetch('/api/v1/devotionals/daily')
       .then((response) => response.json())
       .then((json) => {
